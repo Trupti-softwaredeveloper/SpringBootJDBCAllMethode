@@ -64,4 +64,10 @@ public class EmployeeController {
     {
         return employeeService.getDataByEmailId(empEmailId);
     }
+
+    @GetMapping("/getdatabyemppassword/{empPassword}")
+    public Employee getDataByPassword(@PathVariable String empPassword )
+    {
+        return employeeService.getDataByPassword(empPassword);
+    }
 }
